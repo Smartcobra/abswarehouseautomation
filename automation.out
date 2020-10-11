@@ -1,3 +1,9 @@
-2020-10-11 09:10:278 INFO  WaitHelper:22 - waiting for element visibilityOf..
-2020-10-11 09:10:383 INFO  WaitHelper:25 - element is visible..
-2020-10-11 09:10:542 INFO  ServiceHooks:34 - Login into the application with valid credentials is Failed
+2020-10-11 20:10:176 INFO  WaitHelper:22 - waiting for element visibilityOf..
+2020-10-11 20:10:263 INFO  WaitHelper:25 - element is visible..
+2020-10-11 20:10:378 INFO  WaitHelper:22 - waiting for element visibilityOf..
+2020-10-11 20:10:988 INFO  WaitHelper:25 - element is visible..
+2020-10-11 20:10:105 INFO  WaitHelper:22 - waiting for element visibilityOf..
+2020-10-11 20:10:132 INFO  WaitHelper:25 - element is visible..
+2020-10-11 20:10:296 INFO  WaitHelper:22 - waiting for element visibilityOf..
+2020-10-11 20:10:352 INFO  WaitHelper:25 - element is visible..
+2020-10-11 20:10:353 INFO  ServiceHooks:43 - Login into the application with valid credentials is pass

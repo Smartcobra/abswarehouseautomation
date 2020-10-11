@@ -18,18 +18,10 @@ import com.abswarehouse.helper.WaitHelper;
 public class LoginLogoutPage {
 	
 	private WebDriver driver;
-	
-//	@FindBy(xpath="//input[@type='text']")
-//	public WebElement userName;
 
 	@FindBy(id="username")
 	public WebElement userName;
 
-//	@FindBy(xpath="//input[@id='continue']")
-//	WebElement Continue;
-	
-//	@FindBy(xpath="//input[@type='password']")
-//	public WebElement password;
 
 	@FindBy(id="password")
 	public WebElement password;
@@ -37,14 +29,20 @@ public class LoginLogoutPage {
 	@FindBy(id="login_btn")
 	WebElement loginButton;
 	
-//	@FindBy(xpath="//div[@id='nav-tools']/a[@data-nav-role='signin']")
-//	WebElement SignInfromNav;
-//
-//	@FindBy(xpath="//span[contains(text(),'Sign')]/parent::a")
-//	public WebElement logoutBtn;
-//
+
 	@FindBy(xpath="/html/body/app-root/app-home/div/div/div[2]/h2")
 	public WebElement welcomeHome;
+
+
+
+	@FindBy(xpath="/html/body/app-root/app-home/mdb-navbar/nav/div[2]/links/ul[1]/li[2]/a/span")
+	public WebElement uom;
+
+
+
+
+
+
 
 //	@FindBy(xpath="//span[@data-nav-panelkey='TvApplElecPanel']")
 //	public WebElement TvApplElecPanel;
@@ -74,7 +72,14 @@ public class LoginLogoutPage {
 //
 //	@FindBy(xpath="//select[@id='quantity' or @name='quantity']")
 //	public List<WebElement> qtyField;
-	
+
+
+
+	//	@FindBy(xpath="//div[@id='nav-tools']/a[@data-nav-role='signin']")
+//	WebElement SignInfromNav;
+//
+//	@FindBy(xpath="//span[contains(text(),'Sign')]/parent::a")
+//	public WebElement logoutBtn;
 	
 	WaitHelper waitHelper;
 	
@@ -96,7 +101,14 @@ public class LoginLogoutPage {
 	public void clickLoginButton(){
 		loginButton.click();
 	}
-	
+
+
+	public void clickUom(){
+		uom.click();
+	}
+
+
+
 //	public void enterSearchItemandAddToCart(String item){
 //		String mainWindow=driver.getWindowHandle();
 //		this.itemSearchField.sendKeys(item);
