@@ -13,11 +13,14 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+
 import com.abswarehouse.helper.WaitHelper;
 
 public class LoginLogoutPage {
 	
 	private WebDriver driver;
+	WaitHelper waitHelper;
+
 
 	@FindBy(id="username")
 	public WebElement userName;
@@ -34,60 +37,57 @@ public class LoginLogoutPage {
 	public WebElement welcomeHome;
 
 
-
 	@FindBy(xpath="/html/body/app-root/app-home/mdb-navbar/nav/div[2]/links/ul[1]/li[2]/a/span")
 	public WebElement uom;
 
+	@FindBy(xpath="/html/body/app-root/app-uom-c/div/div[2]/div/div[2]/a/span")
+	public WebElement uomRegister;
+
+	@FindBy(xpath="//*[@id=\"uomType\"]")
+	public WebElement uomType;
+
+	@FindBy(xpath="//*[@id=\"uomModel\"]")
+	public WebElement uomModel;
+
+	@FindBy(xpath="//*[@id=\"description\"]")
+	public WebElement uomDescription;
+
+	@FindBy(xpath="/html/body/app-root/app-uom-register/div/div/div[2]/div[1]/form/div[4]/div[2]/input")
+	public WebElement uomSubmit;
+
+    @FindBy(xpath="/html/body/app-root/app-uom-register/div/button")
+    public WebElement uomHome;
+
+
+    @FindBy(xpath="/html/body/app-root/app-uom-c/div/div[2]/div/div[3]/a/span")
+    public WebElement uomData;
+
+	@FindBy(xpath="/html/body/app-root/app-uom-data/div/button[2]")
+	public WebElement uomExportExcel;
+
+	@FindBy(xpath="/html/body/app-root/app-uom-data/div/button[3]")
+	public WebElement uomDownloadPDF;
+
+	@FindBy(xpath="/html/body/app-root/app-uom-data/div/button[1]")
+	public WebElement uomHome2;
+
+	@FindBy(xpath="/html/body/app-root/app-uom-c/div/a/span")
+	public WebElement uomHome3;
+
+	@FindBy(xpath="/html/body/app-root/app-home/mdb-navbar/nav/div[2]/links/ul[2]/li[2]/a")
+	public WebElement myaccount;
+
+
+	@FindBy(xpath="/html/body/app-root/app-home/mdb-navbar/nav/div[2]/links/ul[2]/li[2]/div/a[2]")
+	public WebElement logout;
 
 
 
-
-
-
-//	@FindBy(xpath="//span[@data-nav-panelkey='TvApplElecPanel']")
-//	public WebElement TvApplElecPanel;
-//
-//	@FindBy(xpath="//span[contains(text(),'Headphones')]/parent::a")
-//	public WebElement headPhonesCatLnk;
-//
-//	@FindBy(xpath="//div[@id='mainResults']/ul/li[1]/div/div/div/a[contains(@class,'access-detail-page')]")
-//	public WebElement firstHeadPhoneLnk;
-//
-//	@FindBy(xpath="//input[@id='add-to-cart-button']")
-//	public WebElement addToCartBtn;
-//
-//	@FindBy(xpath="//a[@id='nav-cart']")
-//	public WebElement cartButton;
-//
-//	@FindBy(xpath="//form[@id='activeCartViewForm']/div[@data-name='Active Items' or contains(@class,'sc-list-body')]//input[@value='Delete']")
-//	public List<WebElement> itemList;
-//
-//	//form[@id='activeCartViewForm']/div[@data-name='Active Items' or contains(@class,'sc-list-body')]//input[@value='Delete']
-//
-//	@FindBy(xpath="//div[contains(@class,'nav-search-field')]/input")
-//	public WebElement itemSearchField;
-//
-//	@FindBy(xpath="//div[starts-with(@class,'sg-col-4')]/div[@class='sg-col-inner']/div/h5/a")
-//	public WebElement secondMacbookItem;
-//
-//	@FindBy(xpath="//select[@id='quantity' or @name='quantity']")
-//	public List<WebElement> qtyField;
-
-
-
-	//	@FindBy(xpath="//div[@id='nav-tools']/a[@data-nav-role='signin']")
-//	WebElement SignInfromNav;
-//
-//	@FindBy(xpath="//span[contains(text(),'Sign')]/parent::a")
-//	public WebElement logoutBtn;
-	
-	WaitHelper waitHelper;
-	
 	public LoginLogoutPage(WebDriver driver){
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 		waitHelper = new WaitHelper(driver);
-		//waitHelper.WaitForElement(userName, 60);
+		///waitHelper.WaitForElement(userName, 60);
 	}
 	
 	public void enterUserName(String userName){
@@ -106,6 +106,62 @@ public class LoginLogoutPage {
 	public void clickUom(){
 		uom.click();
 	}
+	public void clickUomRegister(){
+		uomRegister.click();
+	}
+
+	public void selectUOMType(){
+		//Select dropdown = new Select(driver.findElement(By.id("designation")));
+		Select dropdown = new Select(uomType);
+		dropdown.selectByVisibleText("PACKING");
+	}
+
+	public void enterUomModel(String uomModel)
+	{
+		this.uomModel.sendKeys(uomModel);
+	}
+
+	public void enterDescription(String description)
+	{
+		this.uomDescription.sendKeys(description);
+	}
+
+	public void submitUomRegister(){
+		uomSubmit.click();
+	}
+
+    public void clickUomHome(){
+        uomHome.click();
+    }
+
+    public void clickUomData(){
+        uomData.click();
+    }
+
+	public void clickUomExcelExport(){
+		uomExportExcel.click();
+	}
+
+	public void clickUomDownloadPDF(){
+		uomDownloadPDF.click();
+	}
+
+	public void clickUomHome2(){
+		uomHome2.click();
+	}
+
+	public void clickUomHome3(){
+		uomHome3.click();
+	}
+
+	public void clickMyaccount(){
+		myaccount.click();
+	}
+
+	public void clickLogout(){
+		logout.click();
+	}
+
 
 
 

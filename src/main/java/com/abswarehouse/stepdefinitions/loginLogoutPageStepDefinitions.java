@@ -10,6 +10,8 @@ import com.abswarehouse.testBase.TestBase;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 public class loginLogoutPageStepDefinitions extends TestBase {
@@ -32,29 +34,119 @@ public class loginLogoutPageStepDefinitions extends TestBase {
 
 	@When("^I enter password as \"([^\"]*)\"$")
 	public void i_enter_password_as(String arg1) throws Throwable {
-		loginPage.enterPassword(arg1);
 		waitHelper.WaitForElement(loginPage.password,200);
+		loginPage.enterPassword(arg1);
+
 	}
 
 	@When("^click on login button$")
 	public void click_on_login_button() throws Throwable {
 		loginPage.clickLoginButton();
-		waitHelper.WaitForElement(loginPage.welcomeHome, 1000);
-		Thread.sleep(90);
+
 	}
 
 
 	@Then("^I am logged in$")
 	public void i_am_logged_in() throws Throwable {
+		waitHelper.WaitForElement(loginPage.welcomeHome, 100);
 		loginPage.welcomeHome.isDisplayed();
-		waitHelper.WaitForElement(loginPage.welcomeHome, 1000);
+
 
 	}
 
 	@When("^I Click on Uom button$")
 	public void i_Click_on_Uom_button() throws Throwable {
+		waitHelper.WaitForElement(loginPage.uom, 1000);
 		loginPage.clickUom();
-		waitHelper.WaitForElement(loginPage.uom, 10000);
+
+
+	}
+
+	@When("^click on register button$")
+	public void click_on_UOM_register_button() throws Throwable {
+		waitHelper.WaitForElement(loginPage.uomRegister, 1000);
+		loginPage.clickUomRegister();
+
+
+	}
+
+	@Then("^select uomType$")
+	public void select_uomType() throws Throwable {
+		waitHelper.WaitForElement(loginPage.uomType, 4000);
+		loginPage.selectUOMType();
+
+	}
+
+	@Then("^I enter UomModel as \"([^\"]*)\"$")
+	public void i_enter_UomModel_as(String arg1) throws Throwable {
+		waitHelper.WaitForElement(loginPage.uomModel, 4000);
+		//WebDriverWait wait = new WebDriverWait(driver, 100);
+		///wait.until(ExpectedConditions.visibilityOfElementLocated((By.id("id"))));
+		loginPage.enterUomModel(arg1);
+	}
+
+	@Then("^I enter description as \"([^\"]*)\"$")
+	public void i_enter_description_as(String arg1) throws Throwable {
+		waitHelper.WaitForElement(loginPage.uomDescription, 4000);
+		loginPage.enterDescription(arg1);
+	}
+
+	@Then("^submit Uom Registration$")
+	public void submit_Uom_Registration() throws Throwable {
+		//waitHelper.WaitForElement(loginPage.uomRegister, 10);
+		loginPage.submitUomRegister();
+	}
+	@Then("^clik on UOM HOME button$")
+	public void clik_on_UOM_HOME_button() throws Throwable {
+		waitHelper.WaitForElement(loginPage.uomHome, 100);
+		loginPage.clickUomHome();
+	}
+
+	@Then("^clik on UOM DATA button$")
+	public void clik_on_UOM_DATA_button() throws Throwable {
+		waitHelper.WaitForElement(loginPage.uomData, 10);
+		loginPage.clickUomData();
+	}
+
+	@Then("^clik on Export_To_Excel button$")
+	public void clik_on_Export_To_Excel_button() throws Throwable {
+		waitHelper.WaitForElement(loginPage.uomExportExcel, 1000);
+		loginPage.clickUomExcelExport();
+		Thread.sleep(1000);
+	}
+
+	@Then("^clik on Download_PDF button$")
+	public void clik_on_Download_PDF_button() throws Throwable {
+		waitHelper.WaitForElement(loginPage.uomDownloadPDF, 1000);
+		loginPage.clickUomDownloadPDF();
+		Thread.sleep(1000);
+	}
+
+	@Then("^clik on UOM HOME(\\d+) button$")
+	public void clik_on_UOM_HOME_button(int arg1) throws Throwable {
+		waitHelper.WaitForElement(loginPage.uomHome2, 1000);
+		loginPage.clickUomHome2();
+	}
+	@Then("^click on UOM HOME_Again button$")
+	public void click_on_UOM_HOME_Again_button() throws Throwable {
+		waitHelper.WaitForElement(loginPage.uomHome3, 1000);
+		loginPage.clickUomHome3();
+	}
+
+
+	@Then("^click on myAccount button$")
+	public void click_on_myAccount_button() throws Throwable {
+		waitHelper.WaitForElement(loginPage.myaccount, 100);
+		loginPage.clickMyaccount();
+
+	}
+
+
+	@Then("^click on logout button$")
+	public void click_on_logout_button() throws Throwable {
+		waitHelper.WaitForElement(loginPage.logout, 100);
+		loginPage.clickLogout();
+
 	}
 
 

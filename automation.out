@@ -1,9 +1,31 @@
-2020-10-11 20:10:176 INFO  WaitHelper:22 - waiting for element visibilityOf..
-2020-10-11 20:10:263 INFO  WaitHelper:25 - element is visible..
-2020-10-11 20:10:378 INFO  WaitHelper:22 - waiting for element visibilityOf..
-2020-10-11 20:10:988 INFO  WaitHelper:25 - element is visible..
-2020-10-11 20:10:105 INFO  WaitHelper:22 - waiting for element visibilityOf..
-2020-10-11 20:10:132 INFO  WaitHelper:25 - element is visible..
-2020-10-11 20:10:296 INFO  WaitHelper:22 - waiting for element visibilityOf..
-2020-10-11 20:10:352 INFO  WaitHelper:25 - element is visible..
-2020-10-11 20:10:353 INFO  ServiceHooks:43 - Login into the application with valid credentials is pass
+2020-10-13 20:10:307 INFO  WaitHelper:22 - waiting for element visibilityOf..
+2020-10-13 20:10:376 INFO  WaitHelper:25 - element is visible..
+2020-10-13 20:10:537 INFO  WaitHelper:22 - waiting for element visibilityOf..
+2020-10-13 20:10:146 INFO  WaitHelper:25 - element is visible..
+2020-10-13 20:10:168 INFO  WaitHelper:22 - waiting for element visibilityOf..
+2020-10-13 20:10:199 INFO  WaitHelper:25 - element is visible..
+2020-10-13 20:10:311 INFO  WaitHelper:22 - waiting for element visibilityOf..
+2020-10-13 20:10:884 INFO  WaitHelper:25 - element is visible..
+2020-10-13 20:10:987 INFO  WaitHelper:22 - waiting for element visibilityOf..
+2020-10-13 20:10:33 INFO  WaitHelper:25 - element is visible..
+2020-10-13 20:10:216 INFO  WaitHelper:22 - waiting for element visibilityOf..
+2020-10-13 20:10:312 INFO  WaitHelper:25 - element is visible..
+2020-10-13 20:10:529 INFO  WaitHelper:22 - waiting for element visibilityOf..
+2020-10-13 20:10:585 INFO  WaitHelper:25 - element is visible..
+2020-10-13 20:10:994 INFO  WaitHelper:22 - waiting for element visibilityOf..
+2020-10-13 20:10:45 INFO  WaitHelper:25 - element is visible..
+2020-10-13 20:10:152 INFO  WaitHelper:22 - waiting for element visibilityOf..
+2020-10-13 20:10:189 INFO  WaitHelper:25 - element is visible..
+2020-10-13 20:10:326 INFO  WaitHelper:22 - waiting for element visibilityOf..
+2020-10-13 20:10:362 INFO  WaitHelper:25 - element is visible..
+2020-10-13 20:10:580 INFO  WaitHelper:22 - waiting for element visibilityOf..
+2020-10-13 20:10:621 INFO  WaitHelper:25 - element is visible..
+2020-10-13 20:10:754 INFO  WaitHelper:22 - waiting for element visibilityOf..
+2020-10-13 20:10:792 INFO  WaitHelper:25 - element is visible..
+2020-10-13 20:10:868 INFO  WaitHelper:22 - waiting for element visibilityOf..
+2020-10-13 20:10:908 INFO  WaitHelper:25 - element is visible..
+2020-10-13 20:10:09 INFO  WaitHelper:22 - waiting for element visibilityOf..
+2020-10-13 20:10:54 INFO  WaitHelper:25 - element is visible..
+2020-10-13 20:10:138 INFO  WaitHelper:22 - waiting for element visibilityOf..
+2020-10-13 20:10:201 INFO  WaitHelper:25 - element is visible..
+2020-10-13 20:10:329 INFO  ServiceHooks:43 - Login into the application with valid credentials is pass
